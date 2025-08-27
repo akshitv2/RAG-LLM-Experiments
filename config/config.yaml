@@ -1,0 +1,17 @@
+wiki:
+  wiki_config : 20231101.en
+  wiki_split  : train[:1%]
+  max_articles : 10000
+chunking:
+  max_words_per_chunk: 128
+  min_words_per_chunk: 40
+encoder:
+  clip_model_name: openai/clip-vit-large-patch14
+  batch_size: 64
+faiss:
+  out_dir: ./faiss_wiki_clip_demo
+  index_path: ./faiss_wiki_clip_demo/index.faiss
+  meta_path: ./faiss_wiki_clip_demo/metadata.jsonl
+llm:
+  llm_model_name: google/flan-t5-base
+  llm_max_new_tokens: 200
